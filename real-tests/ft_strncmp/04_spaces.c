@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_multi_positive_sign.c                           :+:      :+:    :+:   */
+/*   04_spaces.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:32:37 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:25 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 18:48:54 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/18 18:49:34 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
 
-int multi_positive_sign_test(void)
+int spaces(void)
 {
-    if (ft_atoi("++123") == 0)
+    if (ft_strncmp("42 Amman", "42 Amman", 5) == 33)
         return (0);
     else
         return (-1);

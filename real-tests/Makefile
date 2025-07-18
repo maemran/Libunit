@@ -1,7 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = test_atoi_before_work.c
 OBJS_DIR = OBJS
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 LIBFT_DIR = ../libft

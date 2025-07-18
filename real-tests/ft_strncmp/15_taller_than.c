@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_multi_positive_sign.c                           :+:      :+:    :+:   */
+/*   15_taller_than.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:32:37 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:25 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 19:15:10 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/18 19:15:53 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
 
-int multi_positive_sign_test(void)
+int taller_than(void)
 {
-    if (ft_atoi("++123") == 0)
+    if (ft_strncmp("short", "shorter", 10) == -101)
         return (0);
     else
         return (-1);

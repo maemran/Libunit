@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_multi_positive_sign.c                           :+:      :+:    :+:   */
+/*   09_different_str.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:32:37 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:25 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 19:04:27 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/18 19:05:13 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
 
-int multi_positive_sign_test(void)
+int different_str(void)
 {
-    if (ft_atoi("++123") == 0)
+    if(ft_strncmp("Hello", "HelLo", 5) == 32)
         return (0);
     else
         return (-1);

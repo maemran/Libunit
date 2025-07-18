@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_multi_positive_sign.c                           :+:      :+:    :+:   */
+/*   13_early_null.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:32:37 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:25 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 19:12:00 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/18 19:12:38 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
 
-int multi_positive_sign_test(void)
+int early_null(void)
 {
-    if (ft_atoi("++123") == 0)
+    if (ft_strncmp("abc\0def", "abcxyz", 7) == -120)
         return (0);
     else
         return (-1);

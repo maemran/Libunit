@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_multi_positive_sign.c                           :+:      :+:    :+:   */
+/*   06_negative_n.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:32:37 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:25 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 18:53:17 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/18 18:54:05 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
 
-int multi_positive_sign_test(void)
+int negative_n(void)
 {
-    if (ft_atoi("++123") == 0)
+    if (ft_strncmp("42Amman", "42Amman", -1) == 0)
         return (0);
     else
         return (-1);
