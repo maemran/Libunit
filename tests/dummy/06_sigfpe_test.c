@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   06_sigfpe_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:59:16 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:59:25 by rsham            ###   ########.fr       */
+/*   Created: 2025/07/18 14:15:44 by rsham             #+#    #+#             */
+/*   Updated: 2025/07/18 14:33:54 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-int main(void)
+//SIGFPE – Floating Point Exception
+//An error occurred during arithmetic operations.
+int sigfpe_test(void)
 {
-	return dummy_launcher();
+    volatile int    x;
+    volatile int    y;
+    int             z;
+    
+    x = 1;
+    y = 0;
+    z = x / y;
+    (void)z;
+    return 0;
 }

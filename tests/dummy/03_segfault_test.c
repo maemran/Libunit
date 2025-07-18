@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   03_segfault_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:59:16 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:59:25 by rsham            ###   ########.fr       */
+/*   Created: 2025/07/18 12:48:58 by rsham             #+#    #+#             */
+/*   Updated: 2025/07/18 13:05:26 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <stdlib.h>
 
-int main(void)
+int segfault_test(void)
 {
-	return dummy_launcher();
+    int *ptr = NULL;
+    *ptr = 42;
+    return (0);
 }

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   05_sigabrt_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:59:16 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:59:25 by rsham            ###   ########.fr       */
+/*   Created: 2025/07/18 14:15:58 by rsham             #+#    #+#             */
+/*   Updated: 2025/07/18 14:41:13 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-int main(void)
+//SIGABRT – Abort Signal
+// (signal abort) is raised by your program itself
+//when it decides something is fatally wrong and wants to abort execution.
+int sigabrt_test(void)
 {
-	return dummy_launcher();
+    abort();
+    return 0; 
 }

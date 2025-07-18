@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   08_sigill_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:59:16 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:59:25 by rsham            ###   ########.fr       */
+/*   Created: 2025/07/18 14:14:56 by rsham             #+#    #+#             */
+/*   Updated: 2025/07/18 14:42:32 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-int main(void)
+//SIGILL – Illegal Instruction
+//The CPU tried to execute an invalid or undefined machine instruction.
+int sigill_test(void)
 {
-	return dummy_launcher();
+    raise(SIGILL);
+    return 0;
 }
