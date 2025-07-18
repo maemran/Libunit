@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:07:29 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 14:43:49 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/18 18:38:52 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void free_tests(t_unit_test *list)
     while (list)
     {
         tmp = list->next;
-        free(list->name);
         free(list);
         list = tmp;
     }
