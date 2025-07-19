@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:52:58 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 02:32:08 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 12:15:48 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int dummy_launcher(void)
 {
     t_unit_test *tests;
-    int         result;
     
     tests = NULL;
     load_test(&tests, "OK Test", &ok_test);
@@ -26,7 +25,5 @@ int dummy_launcher(void)
     load_test(&tests, "Floating Point Exception Test (SIGFPE)", &sigfpe_test);
     load_test(&tests, "Broken Pipe Test (SIGPIPE)", &sigpipe_test);
     load_test(&tests, "Illegal Instruction Test (SIGILL)", &sigill_test);
-    result = launch_tests(&tests, NULL);
-    free_tests(tests);
-    return (result);
+    return (launch_tests(&tests, NULL));
 }

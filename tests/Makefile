@@ -13,34 +13,29 @@ SRC = \
 	dummy/08_sigill_test.c
 
 OBJ = $(SRC:.c=.o)
+LIBUNIT_DIR = ../framework
+FRAMEWORK_OBJS = \
+	$(LIBUNIT_DIR)/load_tests.o \
+	$(LIBUNIT_DIR)/launch_tests.o \
+	$(LIBUNIT_DIR)/utils.o
 
-LIBUNIT = ../framework/libunit.a
-LIBFT = ../libft/libft.a
-
-CFLAGS = -Wall -Wextra -Werror -I../framework -I../libft
+CFLAGS = -Wall -Wextra -Werror -I../framework
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIBUNIT) $(LIBFT)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBUNIT) $(LIBFT)
-
-$(LIBUNIT):
-	make -C ../framework
-
-$(LIBFT):
-	make -C ../libft
+$(NAME): $(OBJ) $(FRAMEWORK_OBJS)
+	$(MAKE) -C $(LIBUNIT_DIR)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L$(LIBUNIT_DIR) -lunit
 
 test: all
 	@./$(NAME) || true
 
 clean:
+	$(MAKE) -C $(LIBUNIT_DIR) clean
 	rm -f $(OBJ)
-	make -C ../framework clean
-	make -C ../libft clean
 
 fclean: clean
+	$(MAKE) -C $(LIBUNIT_DIR) fclean
 	rm -f $(NAME)
-	make -C ../framework fclean
-	make -C ../libft fclean
 
 re: fclean all
