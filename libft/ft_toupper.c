@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
+/*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 01:28:58 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:18:57 by maemran          ###   ########.fr       */
+/*   Created: 2024/09/01 11:37:06 by salshaha          #+#    #+#             */
+/*   Updated: 2024/09/02 14:51:50 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "real_tests.h"
+#include "libft.h"
 
-int main(void)
+int	ft_toupper(int c)
 {
-    ft_atoi_box();
-    ft_atoi_launcher();
-    ft_strncmp_box();
-    ft_strncmp_launcher();
-    return (0);
+	char	x;
+
+	if (c >= 97 && c <= 122)
+	{
+		x = c - 32;
+		return (x);
+	}
+	else
+		return (c);
 }
+/*int main(void)
+{
+	char	c = '/';
+	printf("%c",ft_toupper(c));
+}*/

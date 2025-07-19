@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   12_min_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 01:28:58 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:18:57 by maemran          ###   ########.fr       */
+/*   Created: 2025/07/18 17:55:40 by maemran           #+#    #+#             */
+/*   Updated: 2025/07/19 01:57:55 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "real_tests.h"
+#include "../real_tests.h"
 
-int main(void)
+int min_int_test(void)
 {
-    ft_atoi_box();
-    ft_atoi_launcher();
-    ft_strncmp_box();
-    ft_strncmp_launcher();
-    return (0);
+    if (ft_atoi("-2147483648") == -2147483648)
+        return (0);
+    else
+        return (-1);
 }

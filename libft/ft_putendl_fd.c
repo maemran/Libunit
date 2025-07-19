@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
+/*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 01:28:58 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:18:57 by maemran          ###   ########.fr       */
+/*   Created: 2024/09/02 12:49:40 by salshaha          #+#    #+#             */
+/*   Updated: 2024/09/02 14:50:55 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "real_tests.h"
+#include "libft.h"
 
-int main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-    ft_atoi_box();
-    ft_atoi_launcher();
-    ft_strncmp_box();
-    ft_strncmp_launcher();
-    return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	write(fd, s, i);
+	write(fd, "\n", 1);
 }
+/*
+int main ()
+{
+	ft_putstr_fd("sarah", 0);
+}*/

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
+/*   By: salshaha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 01:28:58 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:18:57 by maemran          ###   ########.fr       */
+/*   Created: 2024/09/08 14:32:02 by salshaha          #+#    #+#             */
+/*   Updated: 2024/09/11 10:36:19 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "real_tests.h"
+#include "libft.h"
 
-int main(void)
+int	ft_lstsize(t_list *lst)
 {
-    ft_atoi_box();
-    ft_atoi_launcher();
-    ft_strncmp_box();
-    ft_strncmp_launcher();
-    return (0);
+	int	size;
+
+	size = 0;
+	while (lst != NULL)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }
