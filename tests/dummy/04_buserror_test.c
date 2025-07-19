@@ -3,22 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   04_buserror_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
+/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:49:17 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 14:42:40 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 13:37:16 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "../../framework/libunit.h"
 
-//SIGBUS - Bus Error) is a signal sent by the operating system when a program
-//tries to access memory in an invalid way, but not due to a null or invalid pointer
-//(that would be SIGSEGV). Instead, it's caused by hardware-level restrictions.
+#if defined(__i386__)
+# undef FLAG
+# define FLAG 0
+#elif defined(__x86_64__)
+# undef FLAG
+# define FLAG 1
+#endif
+
 int	buserror_test(void)
 {
-    char arr[4];
-    int *p = (int *)(arr + 1); // misaligned pointer
-    *p = 42; // writing to misaligned address
-    return (0);
+	char	arr[4];
+	int		*ptr;
+
+	if (FLAG == 1)
+		__asm__("pushf\norl $0x40000,(%rsp)\npopf");
+	else
+		__asm__("pushf\norl $0x40000,(%esp)\npopf");
+	ptr = (int *)(arr + 1);
+	*ptr = 42;
+	return (0);
 }

@@ -1,6 +1,8 @@
 #ifndef LIBUNIT_H
 # define LIBUNIT_H
 
+# define FLAG 0
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
@@ -24,7 +26,7 @@ void	load_test(t_unit_test **list, char *name, int (*func)(void));
 int	launch_tests(t_unit_test **list, char *test_function);
 void 	free_tests(t_unit_test *list);
 void	print_signal_result(int status);
-size_t	ft_strlen(char const *s);
+int print_test_nums(int passed, int total);
 
 
 //tests

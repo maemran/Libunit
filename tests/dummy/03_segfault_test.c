@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   03_segfault_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
+/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:48:58 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 13:05:26 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 13:30:28 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../../framework/libunit.h"
 
 int segfault_test(void)
 {

@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 01:28:58 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:18:57 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 14:01:47 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 int main(void)
 {
     ft_atoi_box();
-    ft_atoi_launcher();
+    if (ft_atoi_launcher() == -2)
+        return (1);
     ft_strncmp_box();
-    ft_strncmp_launcher();
+    if (ft_strncmp_launcher() == -2)
+        return (1);
     return (0);
 }

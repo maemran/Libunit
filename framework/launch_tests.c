@@ -6,27 +6,32 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:57:51 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 09:31:04 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 14:09:52 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-static int	run_test(t_unit_test *test, char *test_function)
+static int	run_test(t_unit_test *test, char *test_function, t_unit_test *head)
 {
 	pid_t	pid;
 	int		status;
 	int		ret;
+	int (*temp)(void);
 
+	temp = test->func;
 	if (!test_function)
-		write(1, "TEST: ", 6);
+		write(1, "\033[33mTEST:\033[0m ", 16);
 	else
 		write (1, test_function, ft_strlen(test_function));
 	write(1, test->name, ft_strlen(test->name));
 	write(1, " : ", 3);
 	pid = fork();
 	if (pid == 0)
-		exit(test->func());
+	{
+		free_tests(head);
+		exit(temp());
+	}
 	if (pid > 0)
 	{
 		wait(&status);
@@ -42,26 +47,23 @@ static int	run_test(t_unit_test *test, char *test_function)
 
 int	launch_tests(t_unit_test **list, char *test_function)
 {
-	t_unit_test	*cur;
+	t_unit_test	*head;
 	int			total;
 	int			passed;
 
-	cur = *list;
+	head = *list;
 	total = 0;
 	passed = 0;
-	while (cur)
+	while (*list)
 	{
-		passed += run_test(cur, test_function);
+		passed += run_test(*list, test_function, head);
 		total++;
-		cur = cur->next;
+		*list = (*list)->next;
 	}
-	write (1, "\n", 1);
-	ft_putstr_fd("\033[0;32m", 1);
-	ft_putstr_fd(ft_itoa(passed), 1);
-	write (1, "/ ", 1);
-	ft_putstr_fd(ft_itoa(total), 1);
-	ft_putstr_fd(" tests checked\n", 1);
-	ft_putstr_fd ("\033[0m", 1);
+	*list = head;
+	free_tests(*list);
+	if (!print_test_nums(passed, total))
+		return (-2);
 	if (passed == total)
 		return (0);
 	return (-1);

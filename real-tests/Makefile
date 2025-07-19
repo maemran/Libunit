@@ -1,10 +1,15 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 OBJS_DIR = OBJS
-NAME = main
+NAME = real_tests
 LIBFT_DIR = ../libft
 LIBUNIT_DIR = ../framework
+
+FRAMEWORK_OBJS = \
+	$(LIBUNIT_DIR)/load_tests.o \
+	$(LIBUNIT_DIR)/launch_tests.o \
+	$(LIBUNIT_DIR)/utils.o
 
 SRCS =	main.c\
 		ft_atoi/00_launcher.c\
@@ -44,7 +49,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(FRAMEWORK_OBJS)
 	$(MAKE) -C $(LIBFT_DIR)
 	$(MAKE) -C $(LIBUNIT_DIR)
 	$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT_DIR) -lft -L$(LIBUNIT_DIR) -lunit  -o $(NAME)

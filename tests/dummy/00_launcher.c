@@ -6,16 +6,15 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:52:58 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 02:32:08 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 13:30:21 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "../../framework/libunit.h"
 
 int dummy_launcher(void)
 {
     t_unit_test *tests;
-    int         result;
     
     tests = NULL;
     load_test(&tests, "OK Test", &ok_test);
