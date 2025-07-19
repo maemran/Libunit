@@ -15,23 +15,32 @@ SRC = \
 OBJ = $(SRC:.c=.o)
 
 LIBUNIT = ../framework/libunit.a
-CFLAGS = -Wall -Wextra -Werror -I../framework
+LIBFT = ../libft/libft.a
+
+CFLAGS = -Wall -Wextra -Werror -I../framework -I../libft
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIBUNIT)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBUNIT)
+$(NAME): $(OBJ) $(LIBUNIT) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBUNIT) $(LIBFT)
 
 $(LIBUNIT):
 	make -C ../framework
+
+$(LIBFT):
+	make -C ../libft
 
 test: all
 	@./$(NAME) || true
 
 clean:
 	rm -f $(OBJ)
+	make -C ../framework clean
+	make -C ../libft clean
 
 fclean: clean
 	rm -f $(NAME)
+	make -C ../framework fclean
+	make -C ../libft fclean
 
 re: fclean all
