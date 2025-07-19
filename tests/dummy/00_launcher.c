@@ -26,5 +26,7 @@ int dummy_launcher(void)
     load_test(&tests, "Floating Point Exception Test (SIGFPE)", &sigfpe_test);
     load_test(&tests, "Broken Pipe Test (SIGPIPE)", &sigpipe_test);
     load_test(&tests, "Illegal Instruction Test (SIGILL)", &sigill_test);
-    return (launch_tests(&tests, NULL));
+    result = launch_tests(&tests, NULL);
+    free_tests(tests);
+    return (result);
 }
