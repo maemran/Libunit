@@ -12,13 +12,13 @@
 
 #include "real_tests.h"
 
-int main(void)
+int	main(void)
 {
-    ft_atoi_box();
-    if (ft_atoi_launcher() == -2)
-        return (1);
-    ft_strncmp_box();
-    if (ft_strncmp_launcher() == -2)
-        return (1);
-    return (0);
+	ft_atoi_box();
+	if (ft_atoi_launcher() == -2)
+		return (1);
+	ft_strncmp_box();
+	if (ft_strncmp_launcher() == -2)
+		return (1);
+	return (0);
 }
