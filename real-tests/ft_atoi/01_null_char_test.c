@@ -6,13 +6,13 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:27:33 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:16:17 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 02:25:54 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/libunit.h"
+#include "../real_tests.h"
 
-int null_char_test(void)
+int null_char(void)
 {
     if (ft_atoi("") == 0)
         return (0);

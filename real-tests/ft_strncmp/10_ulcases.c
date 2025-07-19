@@ -6,9 +6,11 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:06:42 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 19:07:05 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 01:59:38 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../real_tests.h"
 
 int ulcases(void)
 {

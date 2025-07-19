@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
+/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:52:58 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 14:23:02 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 02:32:08 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int dummy_launcher(void)
     load_test(&tests, "Floating Point Exception Test (SIGFPE)", &sigfpe_test);
     load_test(&tests, "Broken Pipe Test (SIGPIPE)", &sigpipe_test);
     load_test(&tests, "Illegal Instruction Test (SIGILL)", &sigill_test);
-    return (launch_tests(&tests));
+    return (launch_tests(&tests, NULL));
 }

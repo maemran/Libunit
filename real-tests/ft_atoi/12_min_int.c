@@ -6,11 +6,11 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 17:55:40 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 17:55:52 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 01:57:55 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/libunit.h"
+#include "../real_tests.h"
 
 int min_int_test(void)
 {

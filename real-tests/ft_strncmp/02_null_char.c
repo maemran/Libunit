@@ -6,11 +6,11 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:39:27 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/18 18:40:01 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 01:58:17 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/libunit.h"
+#include "../real_tests.h"
 
 int null_char_test(void)
 {
