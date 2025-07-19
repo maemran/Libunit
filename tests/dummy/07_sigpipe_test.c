@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   07_sigpipe_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
+/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:15:26 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 14:42:34 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 13:31:13 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "../../framework/libunit.h"
 
-//SIGPIPE – Broken Pipe
-//A process wrote to a pipe or socket, but the reading end is closed.
 int sigpipe_test(void)
 {
     int     pipefd[2];

@@ -3,16 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
+/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:59:16 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:59:25 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 14:16:36 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "../framework/libunit.h"
 
 int main(void)
 {
-	return dummy_launcher();
+	int num;
+	
+	ft_dummy_box();
+	num = dummy_launcher();
+	if (num == -2)
+		return (1);
+	return (num);
 }

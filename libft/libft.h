@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:40:22 by salshaha          #+#    #+#             */
-/*   Updated: 2025/07/19 03:14:48 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 14:16:13 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-long long int		ft_atoi(const char *nptr);
+int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -71,6 +71,7 @@ void				ft_lstclear(t_list **lst);
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void    			ft_atoi_box(void);
 void				ft_strncmp_box(void);
+void				ft_dummy_box(void);
 
 
 #endif
