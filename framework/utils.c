@@ -29,7 +29,6 @@ void free_tests(t_unit_test *list)
     while (list)
     {
         tmp = list->next;
-        free(list->name);
         free(list);
         list = tmp;
     }

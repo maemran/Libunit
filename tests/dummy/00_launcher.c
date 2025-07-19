@@ -15,6 +15,7 @@
 int dummy_launcher(void)
 {
     t_unit_test *tests;
+    int         result;
     
     tests = NULL;
     load_test(&tests, "OK Test", &ok_test);
