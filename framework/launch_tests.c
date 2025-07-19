@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:57:51 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 04:14:20 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 09:31:04 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,13 @@ int	launch_tests(t_unit_test **list, char *test_function)
 		total++;
 		cur = cur->next;
 	}
-	// write (1, "\n", 1);
-	// ft_putstr_fd("\033[0;32m", 1);
-	// //ft_putstr_fd(ft_itoa(passed), 1);
-	// printf ("%i", passed);
-	// write (1, "/", 1);
-	// //ft_putstr_fd(ft_itoa(total), 1);
-	// printf ("%i", total);
-	// ft_putstr_fd(" tests checked", 1);
-	// ft_putstr_fd ("\033[0m", 1);
+	write (1, "\n", 1);
+	ft_putstr_fd("\033[0;32m", 1);
+	ft_putstr_fd(ft_itoa(passed), 1);
+	write (1, "/ ", 1);
+	ft_putstr_fd(ft_itoa(total), 1);
+	ft_putstr_fd(" tests checked\n", 1);
+	ft_putstr_fd ("\033[0m", 1);
 	if (passed == total)
 		return (0);
 	return (-1);

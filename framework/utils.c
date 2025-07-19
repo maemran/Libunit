@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:07:29 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 04:10:55 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 09:01:55 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ size_t	ft_strlen(char const *s)
 		i++;
 	return (i);
 }
-
 
 void free_tests(t_unit_test *list)
 {
