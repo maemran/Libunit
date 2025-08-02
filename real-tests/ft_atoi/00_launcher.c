@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 01:42:11 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 02:35:42 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 14:11:14 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int ft_atoi_launcher(void)
     load_test(&tests, "spaces_before_num_test", &spaces_before_num_test);
     load_test(&tests, "different_signs_test", &different_signs_test);
     load_test(&tests, "overflow_test", &overflow_test);
-    return (launch_tests(&tests, "ft_atoi: "));
+    return (launch_tests(&tests, "\033[1;36mft_atoi:\033[0m "));
 }

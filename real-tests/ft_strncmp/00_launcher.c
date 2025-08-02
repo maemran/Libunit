@@ -6,7 +6,7 @@
 /*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 02:08:09 by maemran           #+#    #+#             */
-/*   Updated: 2025/07/19 03:40:31 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 14:11:52 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int ft_strncmp_launcher(void)
     load_test(&tests, "early_null", &early_null);
     load_test(&tests, "single_str", &single_str);
     load_test(&tests, "taller_than", &taller_than);
-    return (launch_tests(&tests, "ft_strncmp: "));
+    return (launch_tests(&tests, "\033[1;95mft_strncmp:\033[0m "));
 }

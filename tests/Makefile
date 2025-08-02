@@ -12,29 +12,45 @@ SRC = \
 	dummy/07_sigpipe_test.c \
 	dummy/08_sigill_test.c
 
-OBJ = $(SRC:.c=.o)
+
+OBJS_DIR = OBJ
+
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRC:.c=.o))
+
 LIBUNIT_DIR = ../framework
+LIBFT_DIR = ../libft
 FRAMEWORK_OBJS = \
 	$(LIBUNIT_DIR)/load_tests.o \
 	$(LIBUNIT_DIR)/launch_tests.o \
 	$(LIBUNIT_DIR)/utils.o
 
+
 CFLAGS = -Wall -Wextra -Werror -I../framework
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(FRAMEWORK_OBJS)
+$(NAME): $(OBJS) $(FRAMEWORK_OBJS)
+	$(MAKE) -C $(LIBFT_DIR)
 	$(MAKE) -C $(LIBUNIT_DIR)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L$(LIBUNIT_DIR) -lunit
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L$(LIBFT_DIR) -lft -L$(LIBUNIT_DIR) -lunit
 
 test: all
 	@./$(NAME) || true
 
+$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJS_DIR):
+	@mkdir -p $(OBJS_DIR)
+
 clean:
+	$(MAKE) -C $(LIBFT_DIR) clean
 	$(MAKE) -C $(LIBUNIT_DIR) clean
-	rm -f $(OBJ)
+	rm -fr $(OBJS_DIR)
 
 fclean: clean
+	$(MAKE) -C $(LIBFT_DIR) fclean
 	$(MAKE) -C $(LIBUNIT_DIR) fclean
 	rm -f $(NAME)
 
