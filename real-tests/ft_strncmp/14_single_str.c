@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int single_str(void)
+int	single_str(void)
 {
-    if (ft_strncmp("x", "y", 1) == -1)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("x", "y", 1) == -1)
+		return (0);
+	else
+		return (-1);
 }

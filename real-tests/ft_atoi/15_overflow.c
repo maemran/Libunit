@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int overflow_test(void)
+int	overflow_test(void)
 {
-    if (ft_atoi("-2147483649") == 2147483647)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("-2147483649") == 2147483647)
+		return (0);
+	else
+		return (-1);
 }

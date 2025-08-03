@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int num_of_letters(void)
+int	num_of_letters(void)
 {
-    if (ft_strncmp("testing", "testaaa", 4) == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("testing", "testaaa", 4) == 0)
+		return (0);
+	else
+		return (-1);
 }

@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int min_int_test(void)
+int	min_int_test(void)
 {
-    if (ft_atoi("-2147483648") == -2147483648)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("-2147483648") == -2147483648)
+		return (0);
+	else
+		return (-1);
 }

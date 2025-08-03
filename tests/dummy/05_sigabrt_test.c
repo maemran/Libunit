@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   05_sigabrt_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
+/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:15:58 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 13:30:49 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 15:27:34 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../framework/libunit.h"
 
-int sigabrt_test(void)
+int	sigabrt_test(void)
 {
-    abort();
-    return 0; 
+	abort();
+	return (0);
 }

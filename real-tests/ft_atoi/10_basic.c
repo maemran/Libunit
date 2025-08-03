@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int basic_test(void)
+int	basic_test(void)
 {
-    if (ft_atoi("42") == 42)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("42") == 42)
+		return (0);
+	else
+		return (-1);
 }

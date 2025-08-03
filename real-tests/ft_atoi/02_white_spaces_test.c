@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int white_spaces_test(void)
+int	white_spaces_test(void)
 {
-    if (ft_atoi("               ") == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("               ") == 0)
+		return (0);
+	else
+		return (-1);
 }

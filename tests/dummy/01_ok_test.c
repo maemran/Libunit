@@ -6,11 +6,11 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:48:35 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/18 12:48:42 by rsham            ###   ########.fr       */
+/*   Updated: 2025/07/19 15:27:26 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ok_test(void)
+int	ok_test(void)
 {
-    return (0);
+	return (0);
 }

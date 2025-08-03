@@ -62,4 +62,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (ft_process(nptr, length, postive, negative));
 }
-

@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int max_int_test(void)
+int	max_int_test(void)
 {
-    if (ft_atoi("2147483647") == 2147483647)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("2147483647") == 2147483647)
+		return (0);
+	else
+		return (-1);
 }

@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int test_ft_strncmp_same_str(void)
+int	test_ft_strncmp_same_str(void)
 {
-    if (ft_strncmp("42Amman", "42Amman", 9) == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("42Amman", "42Amman", 9) == 0)
+		return (0);
+	else
+		return (-1);
 }

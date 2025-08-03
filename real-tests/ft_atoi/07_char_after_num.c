@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int char_after_num(void)
+int	char_after_num(void)
 {
-    if (ft_atoi("42amman") == 42)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("42amman") == 42)
+		return (0);
+	else
+		return (-1);
 }

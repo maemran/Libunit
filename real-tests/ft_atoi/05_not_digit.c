@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int not_digit_test(void)
+int	not_digit_test(void)
 {
-    if (ft_atoi("a1233") == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("a1233") == 0)
+		return (0);
+	else
+		return (-1);
 }

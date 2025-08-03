@@ -12,11 +12,10 @@
 
 #include "../real_tests.h"
 
-int sign_after_num(void)
+int	sign_after_num(void)
 {
-    if (ft_atoi("42+") == 42
-        && ft_atoi("42-") == 42)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("42+") == 42 && ft_atoi("42-") == 42)
+		return (0);
+	else
+		return (-1);
 }

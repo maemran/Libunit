@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   load_tests.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran < maemran@student.42amman.com>     +#+  +:+       +#+        */
+/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:57:37 by rsham             #+#    #+#             */
-/*   Updated: 2025/07/19 11:34:21 by maemran          ###   ########.fr       */
+/*   Updated: 2025/07/19 15:16:47 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void load_test(t_unit_test **list, char *name, int (*func)(void))
+void	load_test(t_unit_test **list, char *name, int (*func)(void))
 {
-	t_unit_test *new;
-	t_unit_test *head;
+	t_unit_test	*new;
+	t_unit_test	*head;
 
 	new = (t_unit_test *)malloc(sizeof(t_unit_test));
 	if (!new)
-		return;
+		return ;
 	new->name = name;
 	new->func = func;
 	new->next = NULL;

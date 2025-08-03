@@ -12,10 +12,10 @@
 
 #include "../framework/libunit.h"
 
-int main(void)
+int	main(void)
 {
-	int num;
-	
+	int	num;
+
 	ft_dummy_box();
 	num = dummy_launcher();
 	if (num == -2)

@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int null_char(void)
+int	null_char(void)
 {
-    if (ft_atoi("") == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("") == 0)
+		return (0);
+	else
+		return (-1);
 }

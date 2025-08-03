@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int zero_n(void)
+int	zero_n(void)
 {
-    if (ft_strncmp("42Amman", "42Amman", 0) == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("42Amman", "42Amman", 0) == 0)
+		return (0);
+	else
+		return (-1);
 }

@@ -12,9 +12,11 @@
 
 #include "../../framework/libunit.h"
 
-int segfault_test(void)
+int	segfault_test(void)
 {
-    int *ptr = NULL;
-    *ptr = 42;
-    return (0);
+	int	*ptr;
+
+	ptr = NULL;
+	*ptr = 42;
+	return (0);
 }

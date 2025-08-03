@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int different_signs_test(void)
+int	different_signs_test(void)
 {
-    if (ft_atoi("-+42") == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("-+42") == 0)
+		return (0);
+	else
+		return (-1);
 }

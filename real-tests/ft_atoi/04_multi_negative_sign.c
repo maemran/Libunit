@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int multi_negative_sign_test(void)
+int	multi_negative_sign_test(void)
 {
-    if (ft_atoi("--123") == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("--123") == 0)
+		return (0);
+	else
+		return (-1);
 }

@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int different_str(void)
+int	different_str(void)
 {
-    if(ft_strncmp("Hello", "HelLo", 5) == 32)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("Hello", "HelLo", 5) == 32)
+		return (0);
+	else
+		return (-1);
 }

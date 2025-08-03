@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int null_in_first_str(void)
+int	null_in_first_str(void)
 {
-    if (ft_strncmp("", "42Amman", 100) == -52)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("", "42Amman", 100) == -52)
+		return (0);
+	else
+		return (-1);
 }

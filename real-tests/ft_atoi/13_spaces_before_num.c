@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int spaces_before_num_test(void)
+int	spaces_before_num_test(void)
 {
-    if (ft_atoi("   42") == 42)
-        return (0);
-    else
-        return (-1);
+	if (ft_atoi("   42") == 42)
+		return (0);
+	else
+		return (-1);
 }

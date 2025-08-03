@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int null_char_test(void)
+int	null_char_test(void)
 {
-    if (ft_strncmp("42Amman", "", 1) == 52)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("42Amman", "", 1) == 52)
+		return (0);
+	else
+		return (-1);
 }

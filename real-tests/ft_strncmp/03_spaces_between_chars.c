@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int spaces_between_chars_test(void)
+int	spaces_between_chars_test(void)
 {
-    if (ft_strncmp("42 Amman", "42Amman", 5) == -33)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("42 Amman", "42Amman", 5) == -33)
+		return (0);
+	else
+		return (-1);
 }

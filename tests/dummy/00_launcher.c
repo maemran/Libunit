@@ -12,18 +12,18 @@
 
 #include "../../framework/libunit.h"
 
-int dummy_launcher(void)
+int	dummy_launcher(void)
 {
-    t_unit_test *tests;
-    
-    tests = NULL;
-    load_test(&tests, "OK Test", &ok_test);
-    load_test(&tests, "KO Test", &ko_test);
-    load_test(&tests, "Segfault Test", &segfault_test);
-    load_test(&tests, "Bus Error Test", &buserror_test);
-    load_test(&tests, "Abort Test (SIGABRT)", &sigabrt_test);
-    load_test(&tests, "Floating Point Exception Test (SIGFPE)", &sigfpe_test);
-    load_test(&tests, "Broken Pipe Test (SIGPIPE)", &sigpipe_test);
-    load_test(&tests, "Illegal Instruction Test (SIGILL)", &sigill_test);
-    return (launch_tests(&tests, NULL));
+	t_unit_test	*tests;
+
+	tests = NULL;
+	load_test(&tests, "OK Test", &ok_test);
+	load_test(&tests, "KO Test", &ko_test);
+	load_test(&tests, "Segfault Test", &segfault_test);
+	load_test(&tests, "Bus Error Test", &buserror_test);
+	load_test(&tests, "Abort Test (SIGABRT)", &sigabrt_test);
+	load_test(&tests, "Floating Point Exception Test (SIGFPE)", &sigfpe_test);
+	load_test(&tests, "Broken Pipe Test (SIGPIPE)", &sigpipe_test);
+	load_test(&tests, "Illegal Instruction Test (SIGILL)", &sigill_test);
+	return (launch_tests(&tests, NULL));
 }

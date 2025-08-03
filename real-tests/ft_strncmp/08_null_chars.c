@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int null_chars(void)
+int	null_chars(void)
 {
-    if (ft_strncmp("", "", 100) == 0)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("", "", 100) == 0)
+		return (0);
+	else
+		return (-1);
 }

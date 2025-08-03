@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int special_chars(void)
+int	special_chars(void)
 {
-    if (ft_strncmp("!@#abc", "!@#abd", 6) == -1)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("!@#abc", "!@#abd", 6) == -1)
+		return (0);
+	else
+		return (-1);
 }

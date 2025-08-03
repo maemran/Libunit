@@ -12,15 +12,15 @@
 
 #include "../../framework/libunit.h"
 
-int sigfpe_test(void)
+int	sigfpe_test(void)
 {
-    volatile int    x;
-    volatile int    y;
-    int             z;
-    
-    x = 1;
-    y = 0;
-    z = x / y;
-    (void)z;
-    return 0;
+	volatile int	x;
+	volatile int	y;
+	int				z;
+
+	x = 1;
+	y = 0;
+	z = x / y;
+	(void)z;
+	return (0);
 }

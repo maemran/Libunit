@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int ulcases(void)
+int	ulcases(void)
 {
-    if (ft_strncmp("abcDEF", "ABCdef", 6) == 32)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("abcDEF", "ABCdef", 6) == 32)
+		return (0);
+	else
+		return (-1);
 }

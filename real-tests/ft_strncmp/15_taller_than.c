@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int taller_than(void)
+int	taller_than(void)
 {
-    if (ft_strncmp("short", "shorter", 10) == -101)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("short", "shorter", 10) == -101)
+		return (0);
+	else
+		return (-1);
 }

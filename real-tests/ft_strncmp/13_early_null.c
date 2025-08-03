@@ -12,10 +12,10 @@
 
 #include "../real_tests.h"
 
-int early_null(void)
+int	early_null(void)
 {
-    if (ft_strncmp("abc\0def", "abcxyz", 7) == -120)
-        return (0);
-    else
-        return (-1);
+	if (ft_strncmp("abc\0def", "abcxyz", 7) == -120)
+		return (0);
+	else
+		return (-1);
 }

@@ -12,8 +12,8 @@
 
 #include "../../framework/libunit.h"
 
-int sigill_test(void)
+int	sigill_test(void)
 {
-    raise(SIGILL);
-    return 0;
+	raise(SIGILL);
+	return (0);
 }
